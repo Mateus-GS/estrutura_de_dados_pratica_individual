@@ -76,18 +76,33 @@ public class Main {
 		  }
 		
 	
-	
 	public static void main(String[] args) {
 		// Gerando array com números aleatórios
         Random random = new Random();
-        int array[] = new int[20000];
+        int arrayInsertionSort[] = new int[20000];
         
-        for (int i=0; i<array.length; i++) {
-            array[i] = 10 + random.nextInt(100);
+        for (int i=0; i<arrayInsertionSort.length; i++) {
+        	arrayInsertionSort[i] = 10 + random.nextInt(100);
         }
         
-        insertionSort(array);
-//        mergeSort(array.length, array);
+        // Clonado array
+        int [] arrayMergeSort = arrayInsertionSort.clone();
+        
+        // Executando insertionSort
+        long comecoInsertionSort = System.currentTimeMillis();
+        insertionSort(arrayInsertionSort);
+        long fimInsertionSort = System.currentTimeMillis();
+
+        // Executando mergeSort
+        long comecoMergeSort = System.currentTimeMillis();
+        mergeSort(arrayMergeSort.length, arrayMergeSort);
+        long fimMergeSort = System.currentTimeMillis();
+        
+        // Imprimindo resultado
+        System.out.println("============ Tempo de execução Insertion Sort ==================");
+        System.out.println(fimInsertionSort - comecoInsertionSort);
+        System.out.println("============ Tempo de execução Merge Sort ==================");
+        System.out.println(fimMergeSort - comecoMergeSort);
         
 	}
 
