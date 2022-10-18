@@ -73,9 +73,9 @@ public class Main {
 		
         // Imprimindo resultado
         System.out.println("============ Tempo de execução Busca Binária ==================");
-        System.out.println(fimBinario - comecoBinario);
+        System.out.println((fimBinario - comecoBinario) / 1000d);
         System.out.println("============ Tempo de execução Busca Sequencial ==================");
-        System.out.println(fimSequencial - fimBinario);
+        System.out.println((fimSequencial - comecoSequencial) / 1000d);
 		
 	}
 
