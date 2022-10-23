@@ -1,7 +1,6 @@
 package lista_exercicio_9_ordenacao_pratica;
 
 import java.util.Random;
-//import java.util.Scanner;
 
 public class Main {
 
@@ -134,6 +133,10 @@ public class Main {
 		System.out.println("Bubble Sort array aleatório time: " + (System.currentTimeMillis() - startTime));
 		
 		startTime = System.currentTimeMillis();
+		bubbleSort(arrayAleatorioBubble);
+		System.out.println("Bubble Sort array aleatório já ordenado time: " + (System.currentTimeMillis() - startTime));
+		
+		startTime = System.currentTimeMillis();
 		bubbleSort(arrayCrecenteBubble);
 		System.out.println("Bubble Sort array crecente time: " + (System.currentTimeMillis() - startTime));
 		
@@ -141,11 +144,19 @@ public class Main {
 		bubbleSort(arrayDecrescenteBubble);
 		System.out.println("Bubble Sort array decrescente time: " + (System.currentTimeMillis() - startTime));
 		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayDecrescenteBubble);
+		System.out.println("Bubble Sort array decrescente já ordenado time: " + (System.currentTimeMillis() - startTime));
+		
 		// Exibindo resultado Merge Sort
 		System.out.println("========= Merge Array ==========");
 		startTime = System.currentTimeMillis();
 		bubbleSort(arrayAleatorioMerge);
 		System.out.println("Merge Sort array aleatório time: " + (System.currentTimeMillis() - startTime));
+		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayAleatorioMerge);
+		System.out.println("Merge Sort array aleatório já ordenado time: " + (System.currentTimeMillis() - startTime));
 		
 		startTime = System.currentTimeMillis();
 		bubbleSort(arrayCrecenteMerge);
@@ -155,11 +166,19 @@ public class Main {
 		bubbleSort(arrayDecrescenteMerge);
 		System.out.println("Merge Sort array decrescente time: " + (System.currentTimeMillis() - startTime));
 		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayDecrescenteMerge);
+		System.out.println("Merge Sort array decrescente já ordenado time: " + (System.currentTimeMillis() - startTime));
+		
 		// Exibindo resultado Insertion
 		System.out.println("========= Insertion Array ==========");
 		startTime = System.currentTimeMillis();
 		bubbleSort(arrayAleatorioInsertion);
 		System.out.println("Insertion array aleatório time: " + (System.currentTimeMillis() - startTime));
+		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayAleatorioInsertion);
+		System.out.println("Insertion array aleatório já ordenado time: " + (System.currentTimeMillis() - startTime));
 		
 		startTime = System.currentTimeMillis();
 		bubbleSort(arrayCrecenteInsertion);
@@ -168,6 +187,10 @@ public class Main {
 		startTime = System.currentTimeMillis();
 		bubbleSort(arrayDecrescenteInsertion);
 		System.out.println("Insertion array decrescente time: " + (System.currentTimeMillis() - startTime));
+		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayDecrescenteInsertion);
+		System.out.println("Insertion array decrescente já ordenado time: " + (System.currentTimeMillis() - startTime));
 
 	}
 
