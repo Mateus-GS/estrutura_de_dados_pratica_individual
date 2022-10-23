@@ -89,9 +89,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		Random random = new Random();
-		int arrayAleatorio[] = new int[100];
-		int arrayCrecente[] = new int[100];
-		int arrayDecrescente[] = new int[100];
+		int arrayAleatorio[] = new int[10000];
+		int arrayCrecente[] = new int[10000];
+		int arrayDecrescente[] = new int[10000];
 		int aux = 0;
 
 		// Criando array Aleatório
@@ -110,17 +110,65 @@ public class Main {
 			aux++;
 		}
 		
-		System.out.println("========= bubbleSort ==========");
-		bubbleSort(arrayAleatorio);
-		for (int i = 0; i < arrayAleatorio.length; i++) {
-			System.out.print(arrayAleatorio[i] + " ");
-		}
+		long startTime = System.currentTimeMillis();
 		
-		System.out.println("\n========= insertionSort ==========");
-		insertionSort(arrayAleatorio);
-		for (int i = 0; i < arrayAleatorio.length; i++) {
-			System.out.print(arrayAleatorio[i] + " ");
-		}
+		// Criando cópias dos arrays Bubble
+		int [] arrayAleatorioBubble = arrayAleatorio.clone();
+		int [] arrayCrecenteBubble = arrayCrecente.clone();
+		int [] arrayDecrescenteBubble = arrayDecrescente.clone();
+		
+		// Criando cópias dos arrays Merge
+		int [] arrayAleatorioMerge = arrayAleatorio.clone();
+		int [] arrayCrecenteMerge = arrayCrecente.clone();
+		int [] arrayDecrescenteMerge = arrayDecrescente.clone();
+		
+		// Criando cópias dos arrays Insertion
+		int [] arrayAleatorioInsertion = arrayAleatorio.clone();
+		int [] arrayCrecenteInsertion = arrayCrecente.clone();
+		int [] arrayDecrescenteInsertion = arrayDecrescente.clone();
+		
+		// Exibindo resultado Bubble Sort
+		System.out.println("========= Bubble Sort ==========");
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayAleatorioBubble);
+		System.out.println("Bubble Sort array aleatório time: " + (System.currentTimeMillis() - startTime));
+		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayCrecenteBubble);
+		System.out.println("Bubble Sort array crecente time: " + (System.currentTimeMillis() - startTime));
+		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayDecrescenteBubble);
+		System.out.println("Bubble Sort array decrescente time: " + (System.currentTimeMillis() - startTime));
+		
+		// Exibindo resultado Merge Sort
+		System.out.println("========= Merge Array ==========");
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayAleatorioMerge);
+		System.out.println("Merge Sort array aleatório time: " + (System.currentTimeMillis() - startTime));
+		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayCrecenteMerge);
+		System.out.println("Merge Sort array crecente time: " + (System.currentTimeMillis() - startTime));
+		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayDecrescenteMerge);
+		System.out.println("Merge Sort array decrescente time: " + (System.currentTimeMillis() - startTime));
+		
+		// Exibindo resultado Insertion
+		System.out.println("========= Insertion Array ==========");
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayAleatorioInsertion);
+		System.out.println("Insertion array aleatório time: " + (System.currentTimeMillis() - startTime));
+		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayCrecenteInsertion);
+		System.out.println("Insertion array crecente time: " + (System.currentTimeMillis() - startTime));
+		
+		startTime = System.currentTimeMillis();
+		bubbleSort(arrayDecrescenteInsertion);
+		System.out.println("Insertion array decrescente time: " + (System.currentTimeMillis() - startTime));
+
 	}
 
 }
